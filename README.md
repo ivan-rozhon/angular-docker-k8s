@@ -8,21 +8,36 @@ _"How to Deploy Angular application on Kubernetes"_
 
 ## Docker
 
-`docker build -t ivanrozhon/spa-demo:v1 .`
-`docker push ivanrozhon/spa-demo:v1`
+```
+docker build -t ivanrozhon/spa-demo:v1 .
+
+docker push ivanrozhon/spa-demo:v1
+```
 
 ## K8s
 
 https://blog.mayadata.io/openebs/steps-to-deploy-angular-application-on-kubernetes
+
 https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+
 https://kubernetes.io/docs/concepts/services-networking/service/
 
-`kubectl apply -f spa-deployment.yaml`
-`kubectl apply -f spa-deployment.yaml`
-`kubectl apply -f spa-loadbalancer.yaml`
+```
+kubectl apply -f spa-deployment.yaml
 
-`kubectl get deployments`
-`kubectl get svc -owide`
+kubectl apply -f spa-deployment.yaml
 
-`minikube start`
-`minikube tunnel`
+kubectl apply -f spa-loadbalancer.yaml
+```
+
+```
+kubectl get deployments
+
+kubectl get svc -owide
+```
+
+```
+minikube start
+
+minikube tunnel
+```
