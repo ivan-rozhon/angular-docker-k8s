@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spa-angular-service
+  labels:
+    app: spa-angular
+spec:
+  type: ClusterIP
+  ports:
+    - name: spa-angular-service-port
+      port: 80
+      protocol: TCP
+  selector:
+    app: spa-angular

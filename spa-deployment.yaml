@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spa-angular-deployment
+  labels:
+    app: spa-angular
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spa-angular
+  template:
+    metadata:
+      labels:
+        app: spa-angular
+    spec:
+      containers:
+        - name: spa-angular
+          image: ivanrozhon/spa-demo:v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
